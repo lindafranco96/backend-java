@@ -18,23 +18,15 @@ public class Mensaje {
     private String nombre;
     private String email;
     private String texto;
-    
-    // ✅ CAMBIO CORRECTO: Inicializamos la fecha aquí directo.
     private LocalDateTime fecha = LocalDateTime.now();
 
-    // 1. Constructor Vacío (OBLIGATORIO para JPA)
     public Mensaje() {} 
 
-    // 2. Constructor con datos (Opcional, pero útil si creas mensajes manuales)
     public Mensaje(String nombre, String email, String texto) {
         this.nombre = nombre;
         this.email = email;
         this.texto = texto;
-        // Ya no hace falta poner this.fecha = now() aquí, porque se pone sola arriba.
     }
-
-    // --- 3. GETTERS Y SETTERS (OBLIGATORIOS) ---
-    // Sin esto, Spring no puede leer ni escribir en el objeto.
 
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }

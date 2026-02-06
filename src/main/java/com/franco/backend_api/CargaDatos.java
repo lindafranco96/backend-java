@@ -12,8 +12,6 @@ public class CargaDatos {
     @Bean
     CommandLineRunner initDatabase(ProyectoRepository repository) {
         return args -> {
-            // Aquí creamos tus proyectos "reales" para la base de datos
-            // Fíjate que usamos el constructor que hiciste ayer
             
             Proyecto p1 = new Proyecto(
                 "Portafolio Personal", 
@@ -31,7 +29,6 @@ public class CargaDatos {
                 "https://lindafranco96.github.io/React-todo-list/"
             );
 
-            // Guardamos en la Base de Datos H2
             repository.save(p1);
             repository.save(p2);
 

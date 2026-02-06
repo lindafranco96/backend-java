@@ -7,12 +7,12 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import java.time.LocalDate;
 
-@Entity // 1. "Soy una Tabla"
-@Table(name = "PROYECTOS") // 2. "Mi nombre en BD es PROYECTOS"
+@Entity
+@Table(name = "PROYECTOS")
 public class Proyecto {
 
-    @Id // 3. Primary Key
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // 4. Auto-incremental (Sequence)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String titulo;
@@ -22,23 +22,17 @@ public class Proyecto {
     private String urlDespliegue;
     private LocalDate fechaCreacion;
 
-    // --- IMPORTANTE: JPA exige un constructor vacío ---
     public Proyecto() {
     }
 
-    // Constructor con datos (para facilitarnos la vida al crear objetos)
     public Proyecto(String titulo, String descripcion, String urlImagen, String urlRepositorio, String urlDespliegue) {
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.urlImagen = urlImagen;
         this.urlRepositorio = urlRepositorio;
         this.urlDespliegue = urlDespliegue;
-        this.fechaCreacion = LocalDate.now(); // Se pone la fecha de hoy automático
+        this.fechaCreacion = LocalDate.now();
     }
-
-    // --- GETTERS Y SETTERS (Necesarios para que todo funcione) ---
-    // Tip: En VS Code puedes generarlos auto (Click derecho > Source Action...), 
-    // pero aquí te los dejo listos para copiar.
     
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }

@@ -35,4 +35,9 @@ public class SaludoController {
         
         return mensajeGuardado;
     }
+
+    @GetMapping("/api/contacto")
+    public List<Mensaje> verMensajes() {
+        return mensajeRepository.findAll();
+    }
 }

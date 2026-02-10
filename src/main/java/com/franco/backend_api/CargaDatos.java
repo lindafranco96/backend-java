@@ -17,6 +17,7 @@ public class CargaDatos {
                 Proyecto p1 = new Proyecto(
                     "Portafolio Personal", 
                     "Mi web profesional construida con React y Spring Boot", 
+                    "Java, React, DB",
                     "https://via.placeholder.com/300", 
                     "https://github.com/lindafranco96/portfolio", 
                     "https://lindafranco.netlify.app"
@@ -25,6 +26,7 @@ public class CargaDatos {
                 Proyecto p2 = new Proyecto(
                     "Todo-List App", 
                     "Gestor de tareas clásico usando LocalStorage", 
+                    "React, LocalStorage, Hooks",
                     "https://via.placeholder.com/300", 
                     "https://github.com/lindafranco96/todo-list", 
                     "https://lindafranco96.github.io/React-todo-list/"

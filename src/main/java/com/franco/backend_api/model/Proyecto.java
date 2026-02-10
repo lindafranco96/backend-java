@@ -14,9 +14,9 @@ public class Proyecto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String titulo;
     private String descripcion;
+    private String teconologias;
     private String urlImagen;
     private String urlRepositorio;
     private String urlDespliegue;
@@ -25,9 +25,10 @@ public class Proyecto {
     public Proyecto() {
     }
 
-    public Proyecto(String titulo, String descripcion, String urlImagen, String urlRepositorio, String urlDespliegue) {
+    public Proyecto(String titulo, String descripcion, String teconologias, String urlImagen, String urlRepositorio, String urlDespliegue) {
         this.titulo = titulo;
         this.descripcion = descripcion;
+        this.teconologias = teconologias;
         this.urlImagen = urlImagen;
         this.urlRepositorio = urlRepositorio;
         this.urlDespliegue = urlDespliegue;
@@ -42,6 +43,9 @@ public class Proyecto {
 
     public String getDescripcion() { return descripcion; }
     public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
+
+    public String getTecnologias() { return teconologias; }
+    public void setTecnologias(String tecnologias) { this.teconologias = tecnologias; }
 
     public String getUrlImagen() { return urlImagen; }
     public void setUrlImagen(String urlImagen) { this.urlImagen = urlImagen; }
